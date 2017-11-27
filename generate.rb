@@ -27,3 +27,18 @@ svg.attributes['height'] = 512
 svg.attributes['width'] = 512
 
 File.write(File.join(DIST_DIR, 'icon.svg'), doc.to_s)
+
+# Generate PNG
+
+`convert #{File.join(DIST_DIR, 'full.svg')} #{File.join(DIST_DIR, 'full.png')}`
+`convert #{File.join(DIST_DIR, 'icon.svg')} #{File.join(DIST_DIR, 'icon.png')}`
+
+# Generate JPEG
+
+`convert #{File.join(DIST_DIR, 'full.svg')} #{File.join(DIST_DIR, 'full.jpg')}`
+`convert #{File.join(DIST_DIR, 'icon.svg')} #{File.join(DIST_DIR, 'icon.jpg')}`
+
+# Generate GIF
+
+`convert #{File.join(DIST_DIR, 'full.svg')} #{File.join(DIST_DIR, 'full.gif')}`
+`convert #{File.join(DIST_DIR, 'icon.svg')} #{File.join(DIST_DIR, 'icon.gif')}`
