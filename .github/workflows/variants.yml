@@ -27,7 +27,7 @@ jobs:
 
       - name: convert image format
         run: |
-          apt install imagemagick
+          sudo apt install -y imagemagick
           for path in $(ls -1 ./dist/*.svg); do
             for ext in png jpg gif webp heic; do
               convert ${path} ${path%.${ext}}
