@@ -1,19 +1,31 @@
-yantene-icons
+yantene's icons
 =============
 
-yantene が Twitter や GitHub などで使用しているアイコンです．
+yantene が使用しているアイコンです。
 
-自分と無関係の場所でこのアイコンを使用されることを防ぐため，
-これらのアイコンを使用する際には連絡をくださいますよう，
-よろしくお願い致します．
+特段ライセンスの設定などはしませんが、
+yantene を表す画像として使用する限り、
+良識の範囲内で使用することができます。
 
-## アイコンの生成
+[Releases](https://github.com/yantene/icons/releases/latest)
+よりダウンロードしてください。
 
-`generate.sh` は，
-顔部分以外をトリミングしたアイコン (512px x 512px, `icon.png`) と
-SVG 画像のフルサイズ (1920px x 680px, `full.png`)
-の PNG 画像を `yantene.svg` から生成するスクリプトです．
+## 画像一覧
 
-Twitter では，
-前者をアイコン画像に，後者をヘッダ画像に設定しています．
+### Simplified
 
+![Simplified](src/simplified.svg)
+
+現在メインで使用しているアイコンです。
+シンプルで視認性が高いのが特徴です。
+
+正方形または真円でトリミングして使うことを想定しています。
+
+### Winter
+
+![Winter](src/winter.svg)
+
+少し前まで使用していたアイコンです。
+ヘッダ画像で使用できるよう、横長になっています。
+
+また、Releases には顔の部分を抜き出したバージョンも含めています。
