@@ -21,18 +21,18 @@ jobs:
 
       - name: crop full images
         run: |
-          for name in winter; do;
-            ./bin/icon-crop.rb ./src/${name}.svg > ./dist/${name}-icon.svg;
+          for name in winter; do
+            ./bin/icon-crop.rb ./src/${name}.svg > ./dist/${name}-icon.svg
           done
 
       - name: imagemagick
         uses: jruipinto/ImageMagick-action@v1
         with:
           command: |
-            for path in $(ls -1 ./dist/*.svg); do;
-              for ext in png jpg gif webp heic; do;
-                convert ${path} ${path%.${ext}};
-              done;
+            for path in $(ls -1 ./dist/*.svg); do
+              for ext in png jpg gif webp heic; do
+                convert ${path} ${path%.${ext}}
+              done
             done
 
       - name: create a release
