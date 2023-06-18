@@ -27,7 +27,7 @@ jobs:
 
       - name: imagemagick
         uses: jruipinto/ImageMagick-action@v1
-        with:
+        with: |
           for path in $(ls -1 ./dist/*.svg); do
             for ext in png jpg gif webp heic; do
               convert ${path} ${path%.${ext}}
