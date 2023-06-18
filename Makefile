@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 .PHONY: all
-all: $(shell echo ./dist/{simplified,{autumn,winter}{,-icon}}.{svg,png,jpg,gif,webp,heic})
+all: $(shell echo ./dist/{simplified,{summer,autumn,winter}{,-icon}}.{svg,png,jpg,gif,webp,heic})
 
 .PHONY: clean
 clean:
@@ -9,6 +9,12 @@ clean:
 
 ./dist/simplified.svg: ./src/simplified.svg
 	cp $< $@
+
+./dist/summer.svg: ./src/summer.svg
+	cp $< $@
+
+./dist/summer-icon.svg: ./src/summer.svg ./bin/icon-crop.rb
+	./bin/icon-crop.rb $< > $@
 
 ./dist/autumn.svg: ./src/autumn.svg
 	cp $< $@
