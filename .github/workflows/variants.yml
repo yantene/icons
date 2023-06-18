@@ -25,17 +25,14 @@ jobs:
             ./bin/icon-crop.rb ./src/${name}.svg > ./dist/${name}-icon.svg
           done
 
-      - name: imagemagick
-        uses: jruipinto/ImageMagick-action@v1
-        with:
-          command: |
-            bash -c '
-              for path in $(ls -1 ./dist/*.svg); do
-                for ext in png jpg gif webp heic; do
-                  convert ${path} ${path%.${ext}}
-                done
-              done
-            '
+      - name: convert image format
+        run: |
+          apt install imagemagick
+          for path in $(ls -1 ./dist/*.svg); do
+            for ext in png jpg gif webp heic; do
+              convert ${path} ${path%.${ext}}
+            done
+          done
 
       - name: create a release
         uses: marvinpinto/action-automatic-releases@v1.2.1
