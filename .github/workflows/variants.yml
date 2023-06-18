@@ -13,26 +13,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: make dist directory
-        run: mkdir -p ./dist
-
-      - name: copy original files
-        run: cp ./src/*.svg ./dist
-
-      - name: crop full images
-        run: |
-          for name in winter; do
-            ./bin/icon-crop.rb ./src/${name}.svg > ./dist/${name}-icon.svg
-          done
-
-      - name: convert image format
+      - name: make all
         run: |
           sudo apt-get install -y imagemagick
-          for path in $(ls -1 ./dist/*.svg); do
-            for ext in png jpg gif webp heic; do
-              convert -verbose ${path} ${path%.${ext}}
-            done
-          done
+          make all
 
       - name: create a release
         uses: marvinpinto/action-automatic-releases@v1.2.1
