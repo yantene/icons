@@ -29,11 +29,13 @@ jobs:
         uses: jruipinto/ImageMagick-action@v1
         with:
           command: |
-            for path in $(ls -1 ./dist/*.svg); do
-              for ext in png jpg gif webp heic; do
-                convert ${path} ${path%.${ext}}
+            bash -c '
+              for path in $(ls -1 ./dist/*.svg); do
+                for ext in png jpg gif webp heic; do
+                  convert ${path} ${path%.${ext}}
+                done
               done
-            done
+            '
 
       - name: create a release
         uses: marvinpinto/action-automatic-releases@v1.2.1
