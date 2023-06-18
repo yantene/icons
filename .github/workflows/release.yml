@@ -6,7 +6,7 @@ on:
       - v*
 
 jobs:
-  image-magick:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
 
       - name: make all
         run: |
-          sudo apt-get install -y imagemagick
+          sudo apt-get install -y inkscape imagemagick
           make all
 
       - name: create a release

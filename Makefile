@@ -17,16 +17,16 @@ clean:
 	cp $< $@
 
 ./dist/%.png: ./dist/%.svg
+	inkscape --export-type="png" --export-filename="$@" $<
+
+./dist/%.jpg: ./dist/%.png
 	convert $< $@
 
-./dist/%.jpg: ./dist/%.svg
+./dist/%.gif: ./dist/%.png
 	convert $< $@
 
-./dist/%.gif: ./dist/%.svg
+./dist/%.webp: ./dist/%.png
 	convert $< $@
 
-./dist/%.webp: ./dist/%.svg
-	convert $< $@
-
-./dist/%.heic: ./dist/%.svg
+./dist/%.heic: ./dist/%.png
 	convert $< $@
