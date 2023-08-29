@@ -21,6 +21,16 @@ yantene を表す画像として使用する限り、
 
 正方形または真円でトリミングして使うことを想定しています。
 
+### Pastel
+
+![Pastel](src/pastel.svg)
+
+Simplified をベースにパーカを着せて全身を構成しました。
+
+顔部分にフォーカスを当てて小さめのアイコンに使いやすい `pastel-icon`、
+全身を含めた `pastel`、
+そして横長のヘッダ画像に使いやすい `pastel-header` を含めています。
+
 ### Winter
 
 ![Winter](src/winter.svg)
