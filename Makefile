@@ -14,7 +14,7 @@ clean:
 	inkscape --export-filename=./dist/pastel-icon.svg --export-id=512x512 ./src/pastel.svg
 
 ./dist/pastel-header.svg: ./src/pastel.svg
-	inkscape --export-filename=./dist/pastel-header.svg --export-id=3600x1200 ./src/pastel.svg
+	inkscape --export-filename=./dist/pastel-header.svg --export-id=3600x2200 ./src/pastel.svg
 
 ./dist/simplified.svg: ./src/simplified.svg
 	cp $< $@
