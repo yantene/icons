@@ -27,9 +27,8 @@ yantene を表す画像として使用する限り、
 
 Simplified をベースにパーカを着せて全身を構成しました。
 
-顔部分にフォーカスを当てて小さめのアイコンに使いやすい `pastel-icon`、
-全身を含めた `pastel`、
-そして横長のヘッダ画像に使いやすい `pastel-header` を含めています。
+顔部分にフォーカスを当てて小さめのアイコンに使いやすい `pastel-icon` に加え、
+壁紙に使いやすい解像度 `pastel-uxga`、`pastel-wqxga`、`pastel-2400`、`pastel-4k` を用意しました。
 
 ### Winter
 
